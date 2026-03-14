@@ -1,9 +1,81 @@
-# Group-lead-scoring-case-study
+# 📊 Lead Scoring Case Study
 
-Problem Statement: 
+A machine learning model that assigns a lead score between 0–100 to help an 
+education company (X Education) identify "Hot Leads" and improve their conversion 
+rate from 30% to 80%.
 
-An education company named X Education sells online courses to industry professionals. On any given day, many professionals who are interested in the courses land on their website and browse for courses. They have process of form filling on their website after which the company that individual as a lead. Once these leads are acquired, employees from the sales team start making calls, writing emails, etc.Through this process, some of the leads get converted while most do not. The typical lead conversion rate at X education is around 30%. Now, this means if, say, they acquire 100 leads in a day, only about 30 of them are converted. To make this process more efficient, the company wishes to identify the most potential leads, also known as Hot Leads.If they successfully identify this set of leads, the lead conversion rate should go up as the sales team will now be focusing more on communicating with the potential leads rather than making calls to everyone
+## 🎯 Problem Statement
 
-Business Objective:
+X Education sells online courses to industry professionals. Out of ~100 leads 
+acquired daily, only ~30 convert to sales. The goal is to build a logistic 
+regression model that scores each lead by conversion probability — so the sales 
+team focuses effort on the most promising leads.
 
-Lead X wants us to build a model to give every lead a lead score between 0 -100 . So that they can identify the Hot leads and increase their conversion rate as well. The CEO want to achieve a lead conversion rate of 80%. They want the model to be able to handle future constraints as well like Peak time actions required, how to utilize full man power and after achieving target what should be the approaches.
+## ✨ Highlights
+
+- **Lead scoring model** — assigns scores 0–100 per lead based on conversion likelihood
+- **Target conversion rate** — model designed to help achieve 80% conversion
+- **Feature selection** — identified key drivers of lead conversion
+- **Business recommendations** — actionable insights for sales and marketing teams
+- **Full summary report** included with findings and model interpretation
+
+## 🛠️ Tech Stack
+
+| Tool | Purpose |
+|------|---------|
+| Python | Core language |
+| Pandas, NumPy | Data manipulation |
+| scikit-learn | Logistic Regression, evaluation |
+| Matplotlib, Seaborn | EDA and visualizations |
+| Jupyter Notebook | Analysis and reporting |
+
+## 📁 Project Structure
+```
+lead-scoring-case-study/
+├── LEAD SCORING CASE STUDY(2).ipynb   # Main notebook
+├── Leads.csv                           # Dataset
+├── Summary Report - Lead Scoring Case Study.pdf  # Business report
+├── LSCS_ppt (1).pdf                   # Presentation slides
+└── README.md
+```
+
+## 📊 Approach
+
+1. **EDA** — Explored lead sources, time spent on site, pages visited, prior activity
+2. **Data Cleaning** — Handled missing values, dropped low-signal columns
+3. **Feature Engineering** — Encoded categorical variables, scaled numeric features
+4. **Modelling** — Logistic Regression with probability thresholding
+5. **Evaluation** — Accuracy, Precision, Recall, ROC-AUC
+6. **Lead Scoring** — Generated 0–100 scores from predicted probabilities
+
+## 🔍 Key Findings
+
+- **Time spent on website** is the strongest predictor of conversion
+- Leads from **direct traffic** and **Google** convert at higher rates
+- Leads who opened emails or clicked links are significantly more likely to convert
+- Certain lead sources (e.g. landing page submissions) have very low conversion rates
+
+## 📄 Dataset
+
+The `Leads.csv` dataset contains ~9,000 leads with attributes including:
+- Lead source, last activity, total time spent on website
+- Email opened/clicked flags
+- Country, occupation, specialization
+- Target variable: `Converted` (1/0)
+
+## ⚙️ Setup & Installation
+```bash
+# 1. Clone the repository
+git clone https://github.com/Lanchana13/Lead-scoring-case-study.git
+cd Lead-scoring-case-study
+
+# 2. Install dependencies
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter
+
+# 3. Launch notebook
+jupyter notebook "LEAD SCORING CASE STUDY(2).ipynb"
+```
+
+## 📄 License
+
+MIT
